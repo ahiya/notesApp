@@ -28,7 +28,6 @@ export default function Home() {
   return (
     <main className="">
       <Sidebar addNote={addNote}/>
-      <h1>This Ahiya local Branch </h1>
       <NoteContainer 
         notes={notes} 
         deleteNote={deleteNote}
