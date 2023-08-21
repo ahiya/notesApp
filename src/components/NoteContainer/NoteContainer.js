@@ -8,7 +8,7 @@ function NoteContainer(props) {
     // }, [])
   return (
     <div className='note-container'>
-        <h1 style={{color :'#000', fontSize : '20px', paddingBottom : '20px'}}>This Ahiya local Branch </h1>
+        <h1 style={{color :'#000', fontSize : '20px', paddingBottom : '20px'}}>Notes</h1>
         {/* <h1></h1> */}
         <div className='note-container_notes'>
             { notes.length > 0 ? (
