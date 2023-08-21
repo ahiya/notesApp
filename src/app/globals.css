@@ -41,7 +41,7 @@ body {
   background-color: aqua;
   display: flex;
   flex-direction: column;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 .note_text{
   flex: 1;
@@ -85,9 +85,9 @@ body {
   top:0;
   bottom:0;
 }
-.sidebar .sidebar_list{
+/* .sidebar .sidebar_list{
   display: none;
-}
+} */
 .sidebar .sidebar_image{
   height: 50px;
   width: 50px;

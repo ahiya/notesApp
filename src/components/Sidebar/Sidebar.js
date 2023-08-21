@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 import plusIcon from '../../assests/plus.png';
 import Image from 'next/image';
 
-function Sidebar(props) {
-  const colors = ['yellow', 'pink', 'cyan', '#63070d'];
+function Sidebar({addNote, handleColorChange}) {
+  const colors = ['yellow', 'pink', 'cyan', '#95d0ed'];
 //   console.log(colors);
 
 const [listOpen, setListOpen] = useState(false);
@@ -14,17 +14,17 @@ const [listOpen, setListOpen] = useState(false);
 // }, [])
   return (
     <div className='sidebar'>
-      <Image src="/images/plus.png" alt='Add' width={50} height={50} onClick={()=>setListOpen(!listOpen)}/>
-      {/* <img src={plusIcon} alt='add' className='sidebar_image'></img> */}
+      {/* <Image src="/images/plus.png" alt='Add' width={50} height={50} onClick={()=>setListOpen(!listOpen)}/> */}
+      <Image src="/images/plus.png" alt='Add' width={50} height={50} onClick={()=>addNote('#ebb521')}/>
       <ul className={`sidebar_list ${listOpen ? "sidebar_list_active" : ""}`}>
       { 
-        colors?.map((item, index) => {
+        colors?.map((color, index) => {
             {/* console.log(item); */}
             return <li 
                 key={index} 
                 className='sidebar_list_item' 
-                style={{backgroundColor: item}}
-            onClick={()=>props.addNote(item)}></li>
+                style={{backgroundColor: color}}
+            onClick={()=>handleColorChange(color)}></li>
         })
       }   
       </ul>
